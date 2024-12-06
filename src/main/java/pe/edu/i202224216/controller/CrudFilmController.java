@@ -60,9 +60,9 @@ public class CrudFilmController {
 	@PostMapping("/film/{id}")
 	public String delFilm(@PathVariable Integer id, Model model,RedirectAttributes flash) {
 		 if(_CrudFilmService.delete(id))
-		 	flash.addFlashAttribute("success", "Se elimino el film correctamente");
+		 	flash.addFlashAttribute("warning", "Se elimino el film correctamente");
 		 else
-			 flash.addFlashAttribute("success", "No Se elimino el film");
+			 flash.addFlashAttribute("error", "No Se elimino el film");
 		return "redirect:/films";
 	}
 	

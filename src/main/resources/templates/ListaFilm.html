@@ -16,7 +16,7 @@
 <body id="page-top">
 	
 		<div class="alert alert-success" th:if="${success!=null}"
-			th:text="${success}" role="alert"></div>
+			th:text="${success}"></div>
 		<div class="alert alert-danger" th:if="${error!=null}"
 			th:text="${error}"></div>
 		<div class="alert alert-warning" th:if="${warning!=null}"
@@ -55,12 +55,13 @@
 									<td th:text="${film.description}"></td>
 									<td th:text="${film.realese}"></td>
 									<td th:text="${film.rating}"></td>
-									<td><a class="btn btn-info "
+									<td>
+											<form method="post" th:action="@{/film/{id}(id=${film.filmId})}">											
+									<a class="btn btn-info "
 										th:href="@{/film/{id}(id=${film.filmId})}"><i
 											class="fa-solid fa-eye"></i></a> <a class="btn btn-warning "
 										th:href="@{/save/{id}(id=${film.filmId})}"><i
 											class="fa-solid fa-pen-clip"></i></a>
-											<form method="post" th:action="@{/film/{id}(id=${film.filmId})}">											
 											<button type="submit" class="btn btn-danger"
 										><i
 											class="fa-sharp-duotone fa-solid fa-trash-can-arrow-up"></i></button>

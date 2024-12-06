@@ -72,12 +72,12 @@ public class Film {
 	@Column(name = "last_update")
 	private LocalDateTime lastUpdate;
 
-	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private Set<FilmCategory> categories;
 
-	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<Inventory> inventories;
 	
-	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private Set<FilmActor> actores;
 }

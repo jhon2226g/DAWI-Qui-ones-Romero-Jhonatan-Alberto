@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Data
 @Entity
@@ -15,7 +16,7 @@ public class Inventory {
 	@Column(name = "inventory_id")
 	private Integer inventoryId;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "film_id")
 	private Film film;
 
@@ -24,4 +25,8 @@ public class Inventory {
 
 	@Column(name = "last_update", nullable = false)
 	private LocalDateTime lastUpdate;
+	
+	// Relación con la entidad Rental
+    @OneToMany(mappedBy = "inventory", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Rental> rentals;
 }
