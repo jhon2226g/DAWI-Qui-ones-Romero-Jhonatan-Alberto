@@ -17,40 +17,42 @@
 	<div class="cotainer-fluid p-4 g-8">
 		<div class="content mx-5">
 			<div class="card shadow mx-5 w-auto">
+				<div class="card-header">
+					<legend>Film Details</legend>
+				</div>
 				<div class="card-body">
 					<form>
-						<legend>Film Details</legend>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label"> filmId </label> <input
 								th:value="${filmSelected.filmId}" type="number"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label">title </label> <input
 								th:value="${filmSelected.title}" type="text"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label">description </label> <input
 								th:value="${filmSelected.description}" type="text"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
-							<label class="form-label">realese </label> <input
+						<div class="mb-3 row">
+							<label class="form-label">Release year </label> <input
 								th:value="${filmSelected.realese}" type="text"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label">LanguageName </label> <input
 								th:value="${filmSelected.LanguageName}" type="text"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label"> rating</label> <input
 								th:value="${filmSelected.rating}" type="text"
 								class="form-control" readonly disabled>
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 row">
 							<label class="form-label">lastUpdate </label> <input
 								th:value="${filmSelected.lastUpdate}" type="text"
 								class="form-control" readonly disabled>

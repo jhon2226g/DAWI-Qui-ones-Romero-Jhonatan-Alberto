@@ -29,21 +29,20 @@
 				<div class="card-header">
 					<div>
 						<h5 class="text-primary">
-							Films <a class="btn btn-outline-success"
-								th:href="@{/save/{id}(id=9999999)}"> <i
-								class="fa-solid fa-folder-plus"></i>
+							Films <a class="btn btn-success"
+								th:href="@{/save/{id}(id=0)}"> <i class="fa-solid fa-plus"></i>
 							</a>
 					</div>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-sm table-bordered table-striped">
-							<thead class="bg-dark text-light">
+						<table class="table table-sm">
+							<thead class="bg-info text-dark">
 								<tr>
 									<th>ID</th>
 									<th>TITLE</th>
 									<th>DESCRIPTION</th>
-									<th>REALESE</th>
+									<th>RELEASE</th>
 									<th>RATING</th>
 									<th>ACCIONES</th>
 								</tr>
@@ -58,10 +57,8 @@
 									<td>
 											<form method="post" th:action="@{/film/{id}(id=${film.filmId})}">											
 									<a class="btn btn-info "
-										th:href="@{/film/{id}(id=${film.filmId})}"><i
-											class="fa-solid fa-eye"></i></a> <a class="btn btn-warning "
-										th:href="@{/save/{id}(id=${film.filmId})}"><i
-											class="fa-solid fa-pen-clip"></i></a>
+										th:href="@{/film/{id}(id=${film.filmId})}"><i class="fa-solid fa-book-open"></i></a> <a class="btn btn-warning "
+										th:href="@{/save/{id}(id=${film.filmId})}"><i class="fa-solid fa-pen-to-square"></i></a>
 											<button type="submit" class="btn btn-danger"
 										><i
 											class="fa-sharp-duotone fa-solid fa-trash-can-arrow-up"></i></button>
